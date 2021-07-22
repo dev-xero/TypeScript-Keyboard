@@ -13,3 +13,4 @@ A virtual Keyboard made with TypeScript and with similar UI\UX from dcode's yout
 - Saves notes to local storage
 - Spacebar and Return key works properly
 - Capslock feature works
+- Offline compatibility
