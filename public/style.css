@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 16px;
+}
+
+body {
+	background-color: #222226;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.app-title {
+	color: #4e86ff;
+	padding: 6px 12px;
+	font-weight: bold;
+	font-size: 1.52rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 8px 0;
+}
+
+.app-title img {
+	width: 48px;
+	max-width: 48px;
+	margin-right: 12px;
+}
+
+#display {
+	font-family: 'Hind', sans-serif;
+	display: block;
+	width: calc(100% - 40px);
+	max-width: calc(100% - 40px);
+	height: 44vh;
+	margin: 0 20px;
+	background-color: #32323840;
+	border: none;
+	outline: none;
+	padding: 8px;
+	resize: none;
+	color: #dadaff;
+	border-radius: 0.125rem;
+}
+
+#display::-webkit-scrollbar {
+	visibility: hidden;
+	width: 5px;
+	cursor: default;
+}
+
+#display::-webkit-scrollbar-thumb {
+	visibility: visible;
+	width: 5px;
+	background: #4e4e57e0;
+	border-radius: 50px;
+	cursor: default;
+}
+
+#keyboard {
+	text-align: center;
+	height: 42vh;
+	background: #1d5092;
+	width: 100%;
+	position: fixed;
+	bottom: -100%;
+	left: 0;
+	padding: 5px 0;
+	padding-top: 8px;
+	box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.1);
+	transition: 440ms ease-in-out bottom;
+	-webkit-transition: 440ms ease-in-out bottom;
+	-moz-transition: 440ms ease-in-out bottom;
+	-ms-transition: 440ms ease-in-out bottom;
+	-o-transition: 440ms ease-in-out bottom;
+}
+
+#keyboard.focused {
+	bottom: 0;
+}
+
+.keyboard-key {
+	height: 45px;
+	width: 6%;
+	max-width: 90px;
+	margin: 3px;
+	border-radius: 4px;
+	border: none;
+	background: rgba(255, 255, 255, 0.2);
+	color: #ffffff;
+	font-size: 1.05rem;
+	outline: none;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: top;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+	position: relative;
+}
+
+.keyboard-key.key-wide {
+	width: 12%;
+}
+
+.keyboard-key:active {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.key-dark {
+	background: rgba(0, 0, 0, 0.25);
+}
+
+.key-xl {
+	width: 36%;
+	max-width: 500px;
+}
+
+.zmdi-hc-fw {
+	width: 1.28571429em;
+	text-align: center;
+	font-size: 22px;
+}
+
+.caps {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	width: 6px;
+	height: 6px;
+	background-color: #344d6b;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	user-select: none;
+}
+
+.keyboard-key.active .caps {
+	background-color: #1cffa0;
+}
